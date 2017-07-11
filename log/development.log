@@ -6,3 +6,12 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 24ms (Views: 10.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2017-07-11 20:49:27 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+  Rendered common/_navbar.html.erb (0.5ms)
+  Rendered common/_footer.html.erb (0.3ms)
+Completed 200 OK in 3636ms (Views: 3623.9ms | ActiveRecord: 0.0ms)
+
+
