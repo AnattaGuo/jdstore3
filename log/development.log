@@ -4122,3 +4122,76 @@ Processing by OrdersController#show as HTML
 Completed 200 OK in 70ms (Views: 63.9ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/rails/info/routes" for ::1 at 2017-07-13 07:19:45 +0800
+Processing by Rails::InfoController#routes as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [69 times] (46.0ms)
+  Rendered /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (70.9ms)
+Completed 200 OK in 87ms (Views: 80.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account/orders" for ::1 at 2017-07-13 07:20:21 +0800
+Processing by Account::OrdersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering account/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ? ORDER BY id DESC[0m  [["user_id", 2]]
+  Rendered account/orders/index.html.erb within layouts/application (5.7ms)
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "cart_items" ON "products"."id" = "cart_items"."product_id" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 5]]
+  Rendered common/_navbar.html.erb (6.4ms)
+  Rendered common/_flashes.html.erb (1.3ms)
+  Rendered common/_footer.html.erb (0.8ms)
+Completed 200 OK in 147ms (Views: 128.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2017-07-13 07:20:26 +0800
+Processing by Rails::InfoController#routes as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [69 times] (19.9ms)
+  Rendered /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 41ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/carts" for ::1 at 2017-07-13 20:01:43 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CartsController#index as HTML
+  Rendering carts/index.html.erb within layouts/application
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 5]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered carts/index.html.erb within layouts/application (61.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "cart_items" ON "products"."id" = "cart_items"."product_id" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 5]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered common/_navbar.html.erb (47.4ms)
+  Rendered common/_flashes.html.erb (0.6ms)
+  Rendered common/_footer.html.erb (0.3ms)
+Completed 200 OK in 530ms (Views: 516.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/account/orders" for ::1 at 2017-07-13 20:01:48 +0800
+Processing by Account::OrdersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering account/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ? ORDER BY id DESC[0m  [["user_id", 2]]
+  Rendered account/orders/index.html.erb within layouts/application (13.7ms)
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "cart_items" ON "products"."id" = "cart_items"."product_id" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 5]]
+  Rendered common/_navbar.html.erb (4.5ms)
+  Rendered common/_flashes.html.erb (0.5ms)
+  Rendered common/_footer.html.erb (0.3ms)
+Completed 200 OK in 108ms (Views: 81.8ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering order_mailer/notify_order_placed.html.erb within layouts/mailer
+  [1m[36mProductList Load (0.4ms)[0m  [1m[34mSELECT "product_lists".* FROM "product_lists" WHERE "product_lists"."order_id" = ?[0m  [["order_id", 3]]
+  Rendered order_mailer/notify_order_placed.html.erb within layouts/mailer (14.6ms)
+OrderMailer#notify_order_placed: processed outbound mail in 210.8ms
