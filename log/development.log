@@ -6787,3 +6787,11 @@ app/controllers/products_controller.rb:3:in `index'
   [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mjtest@jdstore3.com"], ["LIMIT", 1]]
   [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "mjtest@jdstore3.com"], ["encrypted_password", "$2a$11$xbLW5Ou4KkOSXZqczx0r5eIqHvxsGr2fHXHKtkQLxmfOAT6zWxOZK"], ["created_at", "2017-07-13 15:23:33.287614"], ["updated_at", "2017-07-13 15:23:33.287614"]]
   [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mjadmin@jdstore3.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mjuser@jdstore3.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "mjuser@jdstore3.com"], ["encrypted_password", "$2a$11$2anE3bHXtClx4wRuVohMwerdFstCFK3jeIIIKiSD08YZO/MA5HLA2"], ["created_at", "2017-07-13 15:31:00.657040"], ["updated_at", "2017-07-13 15:31:00.657040"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m

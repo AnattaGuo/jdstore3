@@ -10,5 +10,5 @@
 create_account = User.create([email: 'mjadmin@jdstore3.com', password:'123456', password_confirmation: '123456', is_admin: 'true'])
 puts "Admin account created."
 
-create_account = User.create([email: 'mjtest@jdstore3.com', password:'123456', password_confirmation: '123456', is_admin: 'false'])
+create_account = User.create([email: 'mjuser@jdstore3.com', password:'123456', password_confirmation: '123456', is_admin: 'false'])
 puts "User account created."
