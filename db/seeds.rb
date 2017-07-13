@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-create_account = User.create([email: 'mj@jdstore3.com', password:'123456', password_confirmation: '123456', is_admin: 'true'])
+create_account = User.create([email: 'mjadmin@jdstore3.com', password:'123456', password_confirmation: '123456', is_admin: 'true'])
 puts "Admin account created."
 
 create_account = User.create([email: 'mjtest@jdstore3.com', password:'123456', password_confirmation: '123456', is_admin: 'false'])
