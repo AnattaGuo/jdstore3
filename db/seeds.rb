@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-u = User.new
-u.email = "mjadmin@jdstore3.com"           # 可以改成自己的 email
-u.password = "123456"                # 最少要六码
-u.password_confirmation = "123456"   # 最少要六码
-u.is_admin = true
-u.save
+
+create_account = User.create([email: 'mj@jdstore3.com', password:'123456', password_confirmation: '123456', is_admin: 'true'])
+puts "Admin account created."
+
+create_account = User.create([email: 'mjtest@jdstore3.com', password:'123456', password_confirmation: '123456', is_admin: 'false'])
+puts "User account created."

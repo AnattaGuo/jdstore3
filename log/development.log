@@ -6733,3 +6733,57 @@ Completed 200 OK in 128ms (Views: 121.1ms | ActiveRecord: 1.1ms)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+Started GET "/" for 127.0.0.1 at 2017-07-13 23:05:25 +0800
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+CarrierWave::UnknownStorageError (Unknown storage: qiniu):
+  
+app/uploaders/image_uploader.rb:12:in `<class:ImageUploader>'
+app/uploaders/image_uploader.rb:1:in `<top (required)>'
+app/models/product.rb:2:in `<class:Product>'
+app/models/product.rb:1:in `<top (required)>'
+app/controllers/products_controller.rb:3:in `index'
+  Rendering /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.3ms)
+  Rendering /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (73.6ms)
+Started GET "/" for 127.0.0.1 at 2017-07-13 23:05:37 +0800
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+CarrierWave::UnknownStorageError (Unknown storage: qiniu):
+  
+app/uploaders/image_uploader.rb:12:in `<class:ImageUploader>'
+app/uploaders/image_uploader.rb:1:in `<top (required)>'
+app/models/product.rb:2:in `<class:Product>'
+app/models/product.rb:1:in `<top (required)>'
+app/controllers/products_controller.rb:3:in `index'
+  Rendering /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/guomengjun/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mjadmin@jdstore3.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mj@jdstore3.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mjtest@jdstore3.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "mjtest@jdstore3.com"], ["encrypted_password", "$2a$11$xbLW5Ou4KkOSXZqczx0r5eIqHvxsGr2fHXHKtkQLxmfOAT6zWxOZK"], ["created_at", "2017-07-13 15:23:33.287614"], ["updated_at", "2017-07-13 15:23:33.287614"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
